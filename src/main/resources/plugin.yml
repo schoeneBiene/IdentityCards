@@ -1,0 +1,15 @@
+# IdentityCards is a plugin for Spigot servers for creating and managing identities.
+# Copyright (C) 2024, goodbee
+#
+# You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+name: IdentityCards
+version: '${project.version}'
+main: me.goodbee.identitycards.IdentityCards
+api-version: '1.18'
+prefix: IdentityCards
+load: STARTUP
+authors: [goodbee]
+commands:
+  identitycards:
+    description: IdentifyCards Main Command
