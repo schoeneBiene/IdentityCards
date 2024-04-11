@@ -17,42 +17,26 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package me.goodbee.identitycards.command;
+package me.goodbee.identitycards.command.subcommands;
 
 import me.goodbee.identitycards.command.interfaces.Subcommand;
+import me.goodbee.identitycards.guis.NewIdentityScreen;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.command.TabCompleter;
+import org.bukkit.entity.Player;
 
-import java.util.*;
-
-public class IdentityCommand implements CommandExecutor, TabCompleter {
-    Map<String, Subcommand> subcommands = new HashMap<>();
-
-    public void registerSubcommand(Subcommand subcommand, String label) {
-        subcommands.put(label, subcommand);
-    }
-
+public class IdentityNewCommand implements Subcommand {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-
-        if(subcommands.containsKey(args[0])) {
-            subcommands.get(args[0]).onCommand(sender, command, label, Arrays.copyOfRange(args, 1, args.length));
-        } else {
-            sender.sendMessage(ChatColor.RED + "Unknown subcommand: " + args[0]);
+        if(!(sender instanceof Player)) {
+            sender.sendMessage(ChatColor.RED + "You must be a player to use this command!");
+            return true;
         }
+
+        new NewIdentityScreen((Player) sender)
+                .prompt();
 
         return false;
-    }
-
-    @Override
-    public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args) {
-        if(args.length == 1) {
-            return new ArrayList<>(subcommands.keySet());
-        } else {
-            return new ArrayList<>();
-        }
     }
 }

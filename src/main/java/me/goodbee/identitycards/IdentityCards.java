@@ -20,27 +20,36 @@
 package me.goodbee.identitycards;
 
 import me.goodbee.identitycards.command.IdentityCommand;
-import me.goodbee.identitycards.command.subcommands.IdentifyHelpCommand;
-import org.bukkit.Bukkit;
+import me.goodbee.identitycards.command.subcommands.IdentityHelpCommand;
+import me.goodbee.identitycards.command.subcommands.IdentityNewCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class IdentityCards extends JavaPlugin {
+    private static IdentityCards instance;
 
     @Override
     public void onEnable() {
+        instance = this;
+
         registerCommand();
     }
 
     private void registerCommand() {
         IdentityCommand identityCommand = new IdentityCommand();
 
-        identityCommand.registerSubcommand(new IdentifyHelpCommand(), "help");
+        identityCommand.registerSubcommand(new IdentityHelpCommand(), "help");
+        identityCommand.registerSubcommand(new IdentityNewCommand(), "new");
 
         this.getCommand("identitycards").setExecutor(identityCommand);
+        this.getCommand("identitycards").setTabCompleter(identityCommand);
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
+    }
+
+    public static IdentityCards getInstance() {
+        return instance;
     }
 }

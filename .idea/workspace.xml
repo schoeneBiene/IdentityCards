@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="IdentityCards:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="328901a6-a2d6-4b29-82cf-bd96976decc4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/goodbee/identitycards/command/subcommands/IdentityNewCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/goodbee/identitycards/enums/Gender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/goodbee/identitycards/guis/NewIdentityScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/goodbee/identitycards/item/IdentifyCardItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/goodbee/identitycards/IdentityCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/goodbee/identitycards/IdentityCards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/goodbee/identitycards/command/IdentityCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/goodbee/identitycards/command/IdentityCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/goodbee/identitycards/command/subcommands/IdentifyHelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/goodbee/identitycards/command/subcommands/IdentityHelpCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +30,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -37,9 +52,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "copyright.profiles",
     "update.copyright.on.save": "true"
   }

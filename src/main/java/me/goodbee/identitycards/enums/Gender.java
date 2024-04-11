@@ -17,18 +17,10 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package me.goodbee.identitycards.command.subcommands;
+package me.goodbee.identitycards.enums;
 
-import me.goodbee.identitycards.command.interfaces.Subcommand;
-import org.bukkit.ChatColor;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
-
-public class IdentifyHelpCommand implements Subcommand {
-    @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        sender.sendMessage(ChatColor.GREEN + "IdentityCards Help Command");
-
-        return false;
-    }
+public enum Gender {
+    MALE,
+    FEMALE,
+    OTHER
 }
